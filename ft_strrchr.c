@@ -6,13 +6,13 @@
 /*   By: amassias <amassias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 21:50:24 by amassias          #+#    #+#             */
-/*   Updated: 2023/10/16 21:50:54 by amassias         ###   ########.fr       */
+/*   Updated: 2023/10/16 21:52:05 by amassias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	const char	*r;
 
