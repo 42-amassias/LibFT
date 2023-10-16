@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amassias <amassias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/16 12:53:42 by amassias          #+#    #+#             */
-/*   Updated: 2023/10/16 13:00:41 by amassias         ###   ########.fr       */
+/*   Created: 2023/10/16 12:57:12 by amassias          #+#    #+#             */
+/*   Updated: 2023/10/16 12:59:11 by amassias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int c)
+size_t	ft_strlen(char *str)
 {
-	return (' ' <= c && c <= '~');
+	char	*p;
+
+	p = str;
+	while (*p)
+		++p;
+	return (p - str);
 }
