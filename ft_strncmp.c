@@ -6,13 +6,13 @@
 /*   By: amassias <amassias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/09 12:39:30 by amassias          #+#    #+#             */
-/*   Updated: 2023/10/16 14:33:35 by amassias         ###   ########.fr       */
+/*   Updated: 2023/10/16 21:55:41 by amassias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	while (n--)
 	{
