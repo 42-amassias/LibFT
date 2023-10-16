@@ -6,7 +6,7 @@
 /*   By: amassias <amassias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 13:06:48 by amassias          #+#    #+#             */
-/*   Updated: 2023/10/16 13:07:16 by amassias         ###   ########.fr       */
+/*   Updated: 2023/10/16 13:08:37 by amassias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 void	ft_bzero(void *ptr, size_t n)
 {
 	while (n)
-		((char *)ptr)[n] = 0;
+		((char *)ptr)[--n] = 0;
 }
