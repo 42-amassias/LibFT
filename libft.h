@@ -6,14 +6,14 @@
 /*   By: amassias <amassias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 12:34:25 by amassias          #+#    #+#             */
-/*   Updated: 2023/10/16 14:26:15 by amassias         ###   ########.fr       */
+/*   Updated: 2023/10/16 22:01:54 by amassias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <unistd.h>
+# include <stdlib.h>
 
 // CType
 
@@ -40,9 +40,11 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
+char	*ft_strdup(const char *str);
 
 // Stdlib
 
 int		ft_atoi(const char *str);
+void	*ft_calloc(size_t nmemb, size_t size);
 
 #endif
