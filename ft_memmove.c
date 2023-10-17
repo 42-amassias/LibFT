@@ -6,7 +6,7 @@
 /*   By: amassias <amassias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 13:10:53 by amassias          #+#    #+#             */
-/*   Updated: 2023/10/17 23:29:19 by amassias         ###   ########.fr       */
+/*   Updated: 2023/10/18 00:05:35 by amassias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 {
 	void	*dst_cpy;
 
+	if (!dst && !src)
+		return (NULL);
 	dst_cpy = dst;
 	if (dst > src && (size_t)(dst - src) < n)
 	{

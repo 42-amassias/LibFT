@@ -6,7 +6,7 @@
 /*   By: amassias <amassias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 13:08:10 by amassias          #+#    #+#             */
-/*   Updated: 2023/10/17 21:23:57 by amassias         ###   ########.fr       */
+/*   Updated: 2023/10/18 00:05:39 by amassias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
+	if (!dst && !src)
+		return (NULL);
 	while (n--)
 		((char *)dst)[n] = ((char *)src)[n];
 	return (dst);
