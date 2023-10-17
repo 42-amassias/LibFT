@@ -6,14 +6,15 @@
 /*   By: amassias <amassias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 13:04:24 by amassias          #+#    #+#             */
-/*   Updated: 2023/10/16 13:06:25 by amassias         ###   ########.fr       */
+/*   Updated: 2023/10/17 21:24:08 by amassias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-void	ft_memset(void *ptr, int c, size_t n)
+void	*ft_memset(void *ptr, int c, size_t n)
 {
 	while (n)
 		((char *)ptr)[--n] = c;
+	return (ptr);
 }

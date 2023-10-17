@@ -6,14 +6,17 @@
 /*   By: amassias <amassias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 13:10:53 by amassias          #+#    #+#             */
-/*   Updated: 2023/10/16 14:03:03 by amassias         ###   ########.fr       */
+/*   Updated: 2023/10/17 21:23:37 by amassias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_memmove(void *dst, const void *src, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t n)
 {
+	void	*dst_cpy;
+
+	dst_cpy = dst;
 	if (dst > src && dst - src < n)
 	{
 		dst += n - 1;
@@ -24,4 +27,5 @@ void	ft_memmove(void *dst, const void *src, size_t n)
 	else
 		while (n--)
 			*(char *)dst++ = *(char *)src++;
+	return (dst_cpy);
 }
