@@ -6,7 +6,7 @@
 /*   By: amassias <amassias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 22:04:08 by amassias          #+#    #+#             */
-/*   Updated: 2023/10/17 22:04:56 by amassias         ###   ########.fr       */
+/*   Updated: 2023/10/17 22:44:57 by amassias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void	ft_putendl_fd(char *str, int fd)
 {
-	ft_putstr_fd(fd, str);
+	ft_putstr_fd(str, fd);
 	write(fd, "\n", 1);
 }
