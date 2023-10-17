@@ -1,12 +1,12 @@
 /* ************************************************************************** */
-/*                                                                            */
+/*		                                                                    */
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amassias <amassias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/09 12:46:23 by amassias          #+#    #+#             */
-/*   Updated: 2023/10/17 23:18:03 by amassias         ###   ########.fr       */
+/*   Updated: 2023/10/18 00:49:58 by amassias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,22 +15,24 @@
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
-	size_t	j;
+	int		j;
 
-	if (little[0] == '\0')
-		return ((char *) big);
-	j = 0;
-	while (j < len && big[j])
+	i = 0;
+	if (little[i] == '\0')
+		return ((char *)big);
+	while (big[i] != '\0' && i < len)
 	{
-		i = 0;
-		while (little[i] && big[j] && little[i] == big[j])
+		if (big[i] == *little)
 		{
-			++i;
-			++j;
+			j = 0;
+			while (big[i + j] == little[j] && i + j < len)
+			{
+				if (little[j + 1] == '\0')
+					return ((char *)big + i);
+				j++;
+			}
 		}
-		if (little[i] == '\0')
-			return ((char *) big + j - i);
-		j -= i - 1;
+		i++;
 	}
 	return (NULL);
 }
