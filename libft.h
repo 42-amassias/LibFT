@@ -6,7 +6,7 @@
 /*   By: amassias <amassias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 12:34:25 by amassias          #+#    #+#             */
-/*   Updated: 2023/10/17 22:11:48 by amassias         ###   ########.fr       */
+/*   Updated: 2023/10/17 22:16:22 by amassias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -261,7 +261,7 @@ char	*ft_strjoin(char const *str_1, char const *str_2);
  * @return The array of new strings resulting from the split or `NULL` if the
  * allocation fails.
  */
-char	*ft_strtrim(char const *str_1, char const *set);
+char	*ft_strtrim(char const *str, char const *set);
 
 /**
  * @brief Allocates (with malloc(3)) and returns an array of strings obtained by
