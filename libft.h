@@ -6,7 +6,7 @@
 /*   By: amassias <amassias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 12:34:25 by amassias          #+#    #+#             */
-/*   Updated: 2023/10/17 22:01:39 by amassias         ###   ########.fr       */
+/*   Updated: 2023/10/17 22:11:48 by amassias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -359,11 +359,11 @@ void	ft_putstr_fd(char *str, int fd);
 void	ft_putendl_fd(char *str, int fd);
 
 /**
- * @brief Outputs the integer `n` to the given file descriptor.
+ * @brief Outputs the signed integer `n` to the given file descriptor.
  * @param n The integer to output.
  * @param fd The file descriptor on which to write.
  */
-void	ft_putnbr_fd(int n, int fd);
+void	ft_putnbr_fd(signed int n, int fd);
 
 /******************************************************************************/
 /*                                                                            */
