@@ -6,7 +6,7 @@
 /*   By: amassias <amassias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/09 13:06:34 by amassias          #+#    #+#             */
-/*   Updated: 2023/10/16 14:27:51 by amassias         ###   ########.fr       */
+/*   Updated: 2023/10/17 23:16:51 by amassias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 size_t	ft_strlcat(void *dest, const void *src, size_t size)
 {
 	void		*dst_cpy;
-	const void	*src_cpy;
+	const char	*src_cpy;
 	size_t		remaining;
 	size_t		dest_len;
 
@@ -38,5 +38,5 @@ size_t	ft_strlcat(void *dest, const void *src, size_t size)
 		src_cpy++;
 	}
 	*(char *)dst_cpy = '\0';
-	return (dest_len + (src_cpy - src));
+	return (dest_len + (src_cpy - (char *) src));
 }

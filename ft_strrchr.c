@@ -6,7 +6,7 @@
 /*   By: amassias <amassias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 21:50:24 by amassias          #+#    #+#             */
-/*   Updated: 2023/10/16 21:52:05 by amassias         ###   ########.fr       */
+/*   Updated: 2023/10/17 23:18:31 by amassias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ char	*ft_strrchr(const char *s, int c)
 			r = s;
 		++s;
 	}
-	return (r);
+	return ((char *) r);
 }

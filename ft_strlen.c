@@ -6,15 +6,15 @@
 /*   By: amassias <amassias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 12:57:12 by amassias          #+#    #+#             */
-/*   Updated: 2023/10/16 12:59:11 by amassias         ###   ########.fr       */
+/*   Updated: 2023/10/17 23:17:30 by amassias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(char *str)
+size_t	ft_strlen(const char *str)
 {
-	char	*p;
+	const char	*p;
 
 	p = str;
 	while (*p)

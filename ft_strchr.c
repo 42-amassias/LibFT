@@ -6,7 +6,7 @@
 /*   By: amassias <amassias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 21:47:51 by amassias          #+#    #+#             */
-/*   Updated: 2023/10/16 21:49:35 by amassias         ###   ########.fr       */
+/*   Updated: 2023/10/17 23:18:25 by amassias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strchr(const char *s, int c)
 	while (*s)
 	{
 		if (*s == c)
-			return (*s);
+			return ((char *) s);
 		++s;
 	}
 	return (NULL);

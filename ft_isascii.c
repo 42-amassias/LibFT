@@ -6,7 +6,7 @@
 /*   By: amassias <amassias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 12:52:36 by amassias          #+#    #+#             */
-/*   Updated: 2023/10/16 12:58:01 by amassias         ###   ########.fr       */
+/*   Updated: 2023/10/17 23:15:55 by amassias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int	ft_isascii(int c)
 {
-	return (c == c & 0x7F);
+	return (c == (c & 0x7F));
 }

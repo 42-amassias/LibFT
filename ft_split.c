@@ -6,7 +6,7 @@
 /*   By: amassias <amassias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/13 05:37:05 by amassias          #+#    #+#             */
-/*   Updated: 2023/10/17 22:25:43 by amassias         ###   ########.fr       */
+/*   Updated: 2023/10/17 23:20:51 by amassias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ unsigned long	count_tokens(const char *str, char delim)
 	}
 }
 
-char	*register_token(char **res_ptr, char *str, char delim)
+char	*register_token(char **res_ptr, const char *str, char delim)
 {
 	char	*end_cpy;
 	char	*end;
@@ -37,7 +37,7 @@ char	*register_token(char **res_ptr, char *str, char delim)
 
 	while (*str && *str == delim)
 		++str;
-	end = str;
+	end = (char *) str;
 	while (*end && *end != delim)
 		++end;
 	size = end - str;

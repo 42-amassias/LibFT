@@ -6,7 +6,7 @@
 /*   By: amassias <amassias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/09 12:46:23 by amassias          #+#    #+#             */
-/*   Updated: 2023/10/16 21:37:39 by amassias         ###   ########.fr       */
+/*   Updated: 2023/10/17 23:18:03 by amassias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	j;
 
 	if (little[0] == '\0')
-		return (big);
+		return ((char *) big);
 	j = 0;
 	while (j < len && big[j])
 	{
@@ -29,8 +29,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 			++j;
 		}
 		if (little[i] == '\0')
-			return (big + j - i);
+			return ((char *) big + j - i);
 		j -= i - 1;
 	}
-	return (0);
+	return (NULL);
 }

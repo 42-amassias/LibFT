@@ -6,7 +6,7 @@
 /*   By: amassias <amassias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 12:34:25 by amassias          #+#    #+#             */
-/*   Updated: 2023/10/17 22:22:57 by amassias         ###   ########.fr       */
+/*   Updated: 2023/10/17 23:17:19 by amassias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,7 @@ int		ft_tolower(int c);
  * @param str A string.
  * @return The length of `str`.
  */
-size_t	ft_strlen(char *str);
+size_t	ft_strlen(const char *str);
 
 /**
  * @brief Sets `n` bytes of `ptr` to `c`.
