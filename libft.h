@@ -6,7 +6,7 @@
 /*   By: amassias <amassias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 12:34:25 by amassias          #+#    #+#             */
-/*   Updated: 2023/10/17 23:17:19 by amassias         ###   ########.fr       */
+/*   Updated: 2023/10/18 02:13:16 by amassias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -145,7 +145,7 @@ void	*ft_memmove(void *dst, const void *src, size_t n);
  * @param size The length of the string `ft_strlcopy` tries to create.
  * @return The length of `src`.
  */
-size_t	ft_strlcpy(void *dst, const void *src, size_t size);
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 
 /**
  * @brief Concatenate `str` to `dst`. Takes the full `size` of `dst`
@@ -160,7 +160,7 @@ size_t	ft_strlcpy(void *dst, const void *src, size_t size);
  * @param size The length of the string `ft_strlcat` tries to create.
  * @return The initial length of `dst` plus the length of `src`.
  */
-size_t	ft_strlcat(void *dst, const void *src, size_t size);
+size_t	ft_strlcat(char *dst, const char *src, size_t size);
 
 /**
  * @brief Returns a pointer to the first occurence of `c` in `str` if it exists,
