@@ -6,7 +6,7 @@
 /*   By: amassias <amassias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 21:50:24 by amassias          #+#    #+#             */
-/*   Updated: 2023/10/18 00:09:18 by amassias         ###   ########.fr       */
+/*   Updated: 2023/10/18 02:04:06 by amassias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ char	*ft_strrchr(const char *s, int c)
 	r = NULL;
 	while (*s)
 	{
-		if (*s == c)
+		if (*(unsigned char *)s == (unsigned char)c)
 			r = s;
 		++s;
 	}
-	if (*s == c)
+	if (*(unsigned char *)s == (unsigned char)c)
 		r = s;
 	return ((char *) r);
 }
