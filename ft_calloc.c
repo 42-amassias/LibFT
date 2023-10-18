@@ -6,7 +6,7 @@
 /*   By: amassias <amassias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 22:01:26 by amassias          #+#    #+#             */
-/*   Updated: 2023/10/17 00:54:53 by amassias         ###   ########.fr       */
+/*   Updated: 2023/10/18 02:18:40 by amassias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	size_t	sz;
 
 	sz = nmemb * size;
+	if (nmemb == 0)
+		return (malloc(0));
 	if ((size_t)(-1 / nmemb) < size)
 	{
 		errno = ENOMEM;
