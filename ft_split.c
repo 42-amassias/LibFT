@@ -6,77 +6,83 @@
 /*   By: amassias <amassias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/13 05:37:05 by amassias          #+#    #+#             */
-/*   Updated: 2023/10/17 23:20:51 by amassias         ###   ########.fr       */
+/*   Updated: 2023/10/18 04:08:08 by amassias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned long	count_tokens(const char *str, char delim)
+static size_t	count_strings(const char *str, char c)
 {
-	unsigned long	token_count;
+	size_t	string_count;
 
-	token_count = 0;
-	while (1)
+	string_count = 0;
+	while (*str)
 	{
-		while (*str && *str == delim)
+		if (*str == c)
+		{
 			++str;
-		if (*str == '\0')
-			return (token_count);
-		while (*str && *str != delim)
-			++str;
-		++token_count;
+			continue ;
+		}
+		while (*str && *str != c)
+			str++;
+		string_count++;
 	}
+	return (string_count);
 }
 
-char	*register_token(char **res_ptr, const char *str, char delim)
+static const char	*dup_until_c(char **dst, const char *src, char c)
 {
-	char	*end_cpy;
-	char	*end;
-	long	size;
+	size_t	len;
+	size_t	i;
 
-	while (*str && *str == delim)
-		++str;
-	end = (char *) str;
-	while (*end && *end != delim)
-		++end;
-	size = end - str;
-	*res_ptr = (char *) malloc(size + 1);
-	end_cpy = end;
-	end = *res_ptr;
-	if (*res_ptr)
-	{
-		while (size--)
-			*end++ = *str++;
-		*end = '\0';
-	}
-	return (end_cpy);
-}
-
-// Steps :
-// 1.   Skip first word if str[0] in charset
-// 2.   Skip till char not in charset
-// 3.   Register all words
-//   1. If error, free all memory then exit
-// 4.   Null the last element of array
-char	**ft_split(char const *str, char delim)
-{
-	char			**res;
-	long			token_count;
-	unsigned long	res_index;
-
-	token_count = count_tokens(str, delim);
-	res = (char **) malloc(sizeof(char *) * (token_count + 1));
-	if (!res)
+	while (*src == c)
+		src++;
+	len = 0;
+	while (src[len] && src[len] != c)
+		len++;
+	*dst = (char *) malloc(sizeof(char) * (len + 1));
+	if (*dst == NULL)
 		return (NULL);
-	res[token_count] = NULL;
-	res_index = 0;
-	while (token_count--)
+	i = 0;
+	ft_memcpy(*dst, src, len);
+	(*dst)[len] = '\0';
+	src += len + 1;
+	return (src);
+}
+
+static void	free_strs(char ***strs, size_t len)
+{
+	size_t	i;
+
+	i = 0;
+	while (i < len)
+		free((*strs)[i++]);
+	free(*strs);
+	*strs = NULL;
+}
+
+char	**ft_split(const char *s, char c)
+{
+	char	**strs;
+	size_t	string_count;
+	size_t	i;
+
+	string_count = count_strings(s, c);
+	strs = (char **) malloc(sizeof(char *) * (string_count + 1));
+	if (strs)
 	{
-		str = register_token(&res[res_index], str, delim);
-		if (!res[res_index])
-			break ;
-		++res_index;
+		strs[string_count] = NULL;
+		i = 0;
+		while (i < string_count)
+		{
+			s = dup_until_c(strs + i++, s, c);
+			if (!s)
+			{
+				free_strs(&strs, i - 1);
+				return (NULL);
+			}
+		}
 	}
-	return (res);
+	return (strs);
 }
