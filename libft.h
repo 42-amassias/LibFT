@@ -6,7 +6,7 @@
 /*   By: amassias <amassias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 12:34:25 by amassias          #+#    #+#             */
-/*   Updated: 2023/10/18 04:08:18 by amassias         ###   ########.fr       */
+/*   Updated: 2023/10/20 17:58:22 by amassias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -211,6 +211,14 @@ void	*ft_memchr(const void *ptr, int c, size_t n);
  * @return The lexical order of the two memory area.
  */
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
+
+/**
+ * @brief Swaps `n` bytes of `a` and `b`. The memory areas must not overlap.
+ * @param a A memory area.
+ * @param b A memory area.
+ * @param n The number of bytes to swap.
+ */
+void	ft_memswap(void	*a, void *b, size_t n);
 
 /**
  * @brief Locates the first occurrence of the null-terminated string `little`

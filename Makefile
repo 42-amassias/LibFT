@@ -48,6 +48,7 @@ BFILES		=				\
 			ft_lstclear		\
 			ft_lstiter		\
 			ft_lstmap		\
+			ft_memswap		\
 
 SRCS		=	$(addsuffix .c, $(FILES))
 BSRCS		=	$(addsuffix .c,$(BFILES))
