@@ -35,37 +35,37 @@ typedef struct s_list
 /******************************************************************************/
 
 /**
- * @brief Tells wether or not `c` is a letter.
+ * @brief Tells whether or not `c` is a letter.
  * @param c A character.
- * @return Wether or not `c` is a letter.
+ * @return Whether or not `c` is a letter.
  */
 int		ft_isalpha(int c);
 
 /**
- * @brief Tells wether or not `c` is a digit.
+ * @brief Tells whether or not `c` is a digit.
  * @param c A character.
- * @return Wether or not `c` is a digit.
+ * @return Whether or not `c` is a digit.
  */
 int		ft_isdigit(int c);
 
 /**
- * @brief Tells wether or not `c` is a letter or a digit.
+ * @brief Tells whether or not `c` is a letter or a digit.
  * @param c A character.
- * @return Wether or not `c` is a letter or a digit.
+ * @return Whether or not `c` is a letter or a digit.
  */
 int		ft_isalnum(int c);
 
 /**
- * @brief Tells wether or not `c` is an ascii character.
+ * @brief Tells whether or not `c` is an ascii character.
  * @param c A character.
- * @return Wether or not `c` is an ascii character.
+ * @return Whether or not `c` is an ascii character.
  */
 int		ft_isascii(int c);
 
 /**
- * @brief Tells wether or not `c` is printable.
+ * @brief Tells whether or not `c` is printable.
  * @param c A character.
- * @return Wether or not `c` is printable.
+ * @return Whether or not `c` is printable.
  */
 int		ft_isprint(int c);
 
