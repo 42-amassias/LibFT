@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amassias <amassias@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dyamen <dyamen@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/13 05:37:05 by amassias          #+#    #+#             */
-/*   Updated: 2023/10/18 04:08:08 by amassias         ###   ########.fr       */
+/*   Updated: 2023/10/22 16:19:47 by dyamen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ static size_t	count_strings(const char *str, char c)
 static const char	*dup_until_c(char **dst, const char *src, char c)
 {
 	size_t	len;
-	size_t	i;
 
 	while (*src == c)
 		src++;
@@ -44,7 +43,6 @@ static const char	*dup_until_c(char **dst, const char *src, char c)
 	*dst = (char *) malloc(sizeof(char) * (len + 1));
 	if (*dst == NULL)
 		return (NULL);
-	i = 0;
 	ft_memcpy(*dst, src, len);
 	(*dst)[len] = '\0';
 	src += len + 1;
