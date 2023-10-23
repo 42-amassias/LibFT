@@ -48,13 +48,18 @@ BFILES		=				\
 			ft_lstclear		\
 			ft_lstiter		\
 			ft_lstmap		\
+
+EFILES		=				\
 			ft_memswap		\
 
-SRCS		=	$(addsuffix .c, $(FILES))
+
+SRCS		=	$(addsuffix .c,$(FILES) )
 BSRCS		=	$(addsuffix .c,$(BFILES))
+ESRCS		=	$(addsuffix .c,$(EFILES))
 
 OBJS		=	$(addsuffix .o,$(FILES))
 BOBJS		=	$(addsuffix .o,$(BFILES))
+EOBJS		=	$(addsuffix .o,$(EFILES))
 
 NAME		=	libft.a
 
@@ -62,19 +67,18 @@ NAME		=	libft.a
 
 all: $(NAME)
 
-bonus: $(BOBJS) all
-	ar rcs $(NAME) $(BOBJS)
+bonus: all
 
 clean:
-	rm -rf $(OBJS) $(BOBJS)
+	rm -rf $(OBJS) $(BOBJS) $(EOBJS)
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
 
-$(NAME): $(OBJS)
-	ar rcs $(NAME) $(OBJS)
+$(NAME): $(OBJS) $(BOBJS) $(EOBJS)
+	ar rcs $@ $^
 
 %.o: %.c
 	$(CC) -c $< -o $@ -I. $(CFLAGS)
