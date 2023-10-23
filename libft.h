@@ -6,7 +6,7 @@
 /*   By: amassias <amassias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 12:34:25 by amassias          #+#    #+#             */
-/*   Updated: 2023/10/20 17:58:22 by amassias         ###   ########.fr       */
+/*   Updated: 2023/10/23 07:58:48 by amassias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,14 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+
+/******************************************************************************/
+/*                                                                            */
+/* Types                                                                      */
+/*                                                                            */
+/******************************************************************************/
+
+typedef int	(*t_comparator)(void *, void *);
 
 /******************************************************************************/
 /*                                                                            */
@@ -455,5 +463,21 @@ void	ft_lstiter(t_list *list, void (*f)(void *));
  * @return The new list or `NULL` if the allocation fail.
  */
 t_list	*ft_lstmap(t_list *list, void *(*f)(void *), void (*del_fun)(void *));
+
+/******************************************************************************/
+/*                                                                            */
+/* Linked list                                                                */
+/*                                                                            */
+/******************************************************************************/
+
+/**
+ * @brief Sorts `nmemb` elements of size `size` of the list pointed by `base`
+ * using `cmp` as the comparaison function.
+ * @param base A memory area.
+ * @param nmemb The number of elements to sort.
+ * @param size The size of one single element.
+ * @param cmp The comparaison function.
+ */
+void	ft_qsort(void *base, size_t nmemb, size_t size, t_comparator cmp);
 
 #endif
