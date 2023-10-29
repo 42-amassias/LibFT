@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memswap.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dyamen <dyamen@student.42.fr>              +#+  +:+       +#+        */
+/*   By: dyamen <dyamen@student.42lehavre.fr        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 17:55:02 by amassias          #+#    #+#             */
 /*   Updated: 2023/10/22 16:40:06 by dyamen           ###   ########.fr       */

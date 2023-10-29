@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_qsort.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amassias <amassias@student.42.fr>          +#+  +:+       +#+        */
+/*   By: amassias <amassias@student.42lehavre.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 07:52:05 by amassias          #+#    #+#             */
 /*   Updated: 2023/10/23 08:10:16 by amassias         ###   ########.fr       */

@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dyamen <dyamen@student.42.fr>              +#+  +:+       +#+        */
+/*   By: dyamen <dyamen@student.42lehavre.fr        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/13 05:37:05 by amassias          #+#    #+#             */
 /*   Updated: 2023/10/22 16:19:47 by dyamen           ###   ########.fr       */
